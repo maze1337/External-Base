@@ -26,6 +26,7 @@ uintptr_t GetModuleBaseAddress(const char* modName)
 
 void Attach()
 {
+	SetConsoleTitle("External Base");
 	window = FindWindowA(NULL, xorstr("AssaultCube"));		   // Window of prosses/game
 	GetWindowThreadProcessId(window, &procId);				   // Getting 
 	Base = GetModuleBaseAddress(xorstr("ac_client.exe"));	   // Base of the game
